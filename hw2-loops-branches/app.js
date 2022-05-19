@@ -24,4 +24,8 @@ for (N; N <= M; N++) {
 }
 
 alert('Total: ' + sum);
-document.location.reload();
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+    document.location.reload();
+})
