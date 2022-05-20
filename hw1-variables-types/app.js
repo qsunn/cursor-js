@@ -26,7 +26,7 @@ console.log(changeFor500);
 const average = +(sum / 3).toFixed(2);
 console.log(average);
 
-const randomSale = Math.round(Math.random() * (99 - 1) + 1);
+const randomSale = Math.round(Math.random() * 98 + 1);
 console.log(randomSale);
 
 const sumWithSale = +(sum - (sum * randomSale / 100)).toFixed(2);
