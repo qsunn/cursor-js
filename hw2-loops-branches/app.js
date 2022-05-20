@@ -16,8 +16,8 @@ const isOnlyOdds = confirm('Skip even numbers?');
 let sum = 0;
 
 for (let i = N; i <= M; i++) {
-    if (isOnlyOdds) {
-        i % 2 ? sum += i : null;
+    if (isOnlyOdds && i % 2 === 0) {
+        continue;
     } else {
         sum += i;
     }
