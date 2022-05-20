@@ -15,11 +15,11 @@ M = +M;
 const isOnlyOdds = confirm('Skip even numbers?');
 let sum = 0;
 
-for (N; N <= M; N++) {
+for (let i = N; i <= M; i++) {
     if (isOnlyOdds) {
-        N % 2 ? sum += N : null;
+        i % 2 ? sum += i : null;
     } else {
-        sum += N;
+        sum += i;
     }
 }
 
@@ -28,4 +28,4 @@ alert('Total: ' + sum);
 const btn = document.querySelector('button');
 btn.addEventListener('click', () => {
     document.location.reload();
-})
+});
