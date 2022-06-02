@@ -5,10 +5,12 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 const getPairs = arr => {
-    let pair1 = [arr[0], arr[2]],
-        pair2 = [arr[1], arr[3]],
-        pair3 = [arr[4], arr[5]],
-        res = [pair1, pair2, pair3];
+    let girls = arr.filter(e => e[e.length - 1] === 'а');
+    let boys = arr.filter(e => e[e.length - 1] !== 'а');
+    let res = [];
+    for (let i = 0; i < arr.length / 2; i++) {
+        res.push([boys[i], girls[i]]);
+    }
     return res;
 };
 
