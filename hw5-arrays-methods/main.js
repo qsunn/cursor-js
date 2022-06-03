@@ -74,4 +74,4 @@ const generateCombinations = word => {
     }
     return combinations;
 }
-console.log('generateCombinations("man"): ', generateCombinations('vova'));
+console.log('generateCombinations("vova"): ', generateCombinations('vova'));
