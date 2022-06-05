@@ -1,23 +1,26 @@
 const getRandomArray = (length, min, max) => {
     const res = [];
-    const getRandomNumber = () => Math.round(Math.random() * (max - min) + min);
     for (let i = 0; i < length; i++) {
-        res.push(getRandomNumber());
+        res.push(Math.round(Math.random() * (max - min) + min));
     }
     return res;
 }
 console.log('getRandomArray(10, 0, 10): ', getRandomArray(10, 0, 10));
 
-const getMode = (...numbers) => numbers.sort((a, b) => numbers.filter(e => e === a).length - numbers.filter(e => e === b).length).pop();
-
+const getMode = (...numbers) => {
+    let integers = numbers.filter(e => !(e % 1));
+    return integers.sort((a, b) => integers.filter(e => e === a).length - integers.filter(e => e === b).length).pop();
+}
 console.log('getMode(1, 5, 3, 2, 3, 3, 3, 4, 4, 3): ', getMode(1, 5, 3, 2, 3, 3, 3, 4, 4, 3));
 
-const getAverage = (...numbers) => +(numbers.reduce((acc, e) => acc + e) / numbers.length).toFixed(1);
-
+const getAverage = (...numbers) => {
+    let integers = numbers.filter(e => !(e % 1));
+    return +(integers.reduce((acc, e) => acc + e) / integers.length).toFixed(1);
+}
 console.log('getAverage(2, 4, 6, 8, 10, 12): ', getAverage(2, 4, 6, 8, 10, 12));
 
 const getMedian = (...numbers) => {
-    const sorted = numbers.sort((a, b) => a - b);
+    const sorted = numbers.filter(e => !(e % 1)).sort((a, b) => a - b);
     const mid = Math.floor(sorted.length / 2);
     return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
