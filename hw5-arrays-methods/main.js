@@ -72,7 +72,7 @@ const generateCombinations = word => {
         let rest = word.slice(0, i) + word.slice(i + 1, word.length)
 
         for (let combination of generateCombinations(rest)) {
-            combinations.includes(char + combination) ? null : combinations.push(char + combination);
+            if (!combinations.includes(char + combination)) combinations.push(char + combination);
         }
     }
     return combinations;
