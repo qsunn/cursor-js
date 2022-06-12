@@ -20,16 +20,14 @@ function getTotalTaxes() {
 console.log('getTotalTaxes(litva): ', getTotalTaxes.call(litva));
 
 function getMySalary() {
-    const salary = Math.round(Math.random() * 500 + 1500);
-    const taxes = +(this.tax * salary).toFixed(2);
-    return {
-        salary: salary,
-        taxes: taxes,
-        profit: +(salary - taxes).toFixed(2)
-    }
+    setInterval(() => {
+        const salary = Math.round(Math.random() * 500 + 1500);
+        const taxes = +(this.tax * salary).toFixed(2);
+        console.log({
+            salary: salary,
+            taxes: taxes,
+            profit: +(salary - taxes).toFixed(2)
+        })
+    }, 10000)
 }
-console.log('getMySalary.call(ukraine): ', getMySalary.call(ukraine));
-
-const getMySalaryLog = () => console.log('getMySalary.call(ukraine): ', getMySalary.call(ukraine));
-
-setInterval(() => getMySalaryLog(), 10000);
+getMySalary.call(ukraine);
