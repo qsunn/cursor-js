@@ -3,13 +3,12 @@ class Student {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
+        this._studentMarks = [];
+        this.isBanned = false;
     }
 
-    studentMarks = [];
-    isBanned = false;
-
     get marks() {
-        return this.isBanned ? null : this.studentMarks;
+        return this.isBanned ? null : this._studentMarks;
     }
 
     set marks(mark) {
@@ -39,8 +38,8 @@ const student = new Student('ВНЗ Цукеркового Королівств�
 console.log('student.getInfo(): ', student.getInfo());
 console.log('student.marks: ', student.marks);
 console.log('student.marks = 5: ', student.marks = 5);
-console.log('student.marks = 5: ', student.marks = 4);
-console.log('student.marks = 5: ', student.marks = 4);
+console.log('student.marks = 4: ', student.marks = 4);
+console.log('student.marks = 4: ', student.marks = 4);
 console.log('student.marks = 5: ', student.marks = 5);
 console.log('student.marks = 5: ', student.marks = 5);
 console.log('student.marks: ', student.marks);
@@ -71,6 +70,6 @@ console.log('budgetStudent.marks: ', budgetStudent.marks);
 console.log('budgetStudent.marks = 5: ', budgetStudent.marks = 5);
 console.log('budgetStudent.marks = 5: ', budgetStudent.marks = 5);
 console.log('budgetStudent.marks = 5: ', budgetStudent.marks = 5);
-console.log('budgetStudent.marks = 5: ', budgetStudent.marks = 4);
+console.log('budgetStudent.marks = 4: ', budgetStudent.marks = 4);
 console.log('budgetStudent.marks: ', budgetStudent.marks);
 console.log('budgetStudent.getAverageMark(): ', budgetStudent.getAverageMark());
