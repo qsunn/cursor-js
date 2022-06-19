@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW10</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        font-family: sans-serif;
+        display: grid;
+        place-items: center;
+        color: #f2f2f2;
+        background: #1d1d1d;
+        background-image: url('https://images.unsplash.com/photo-1515651571008-95427bed8e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1797&q=80');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 72px);
+        grid-template-rows: repeat(3, 72px);
+        gap: 16px;
+    }
+
+    .btn {
+        color: inherit;
+        font-size: 18px;
+        font-weight: 500;
+        pointer-events: none;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, .4);
+        background: rgba(0, 0, 0, .2);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button class="btn" type="button">
+            Q
+            <audio src="https://ia600503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-1.mp3" controls style="display: none;" id="sound1"></audio>
+        </button>
+        <button class="btn" type="button">
+            W
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-10.mp3" controls style="display: none;" id="sound2"></audio>
+        </button>
+        <button class="btn" type="button">
+            E
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-12.mp3" controls style="display: none;" id="sound3"></audio>
+        </button>
+        <button class="btn" type="button">
+            A
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-13.mp3" id="sound4"></audio>
+        </button>
+        <button class="btn" type="button">
+            S
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-14.mp3" controls style="display: none;" id="sound5"></audio>
+        </button>
+        <button class="btn" type="button">
+            D
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-20.mp3" controls style="display: none;" id="sound6"></audio>
+        </button>
+        <button class="btn" type="button">
+            Z
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-21.mp3" controls style="display: none;" id="sound7"></audio>
+        </button>
+        <button class="btn" type="button">
+            X
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-3.mp3" controls style="display: none;" id="sound8"></audio>
+        </button>
+        <button class="btn" type="button">
+            C
+            <audio src="https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-98.mp3" controls style="display: none;" id="sound9"></audio>
+        </button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
