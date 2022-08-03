@@ -2,7 +2,7 @@
   "name": "hw18-reactjs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://qsunn.github.io/hw18-reactjs/",
+  "homepage": "https://qsunn.github.io/cursor-js/hw18-reactjs",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
